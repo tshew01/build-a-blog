@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<h3>{{heading}}</h3>
+
+
+    <form action = "/blog/newpost" method="post">
+      <label>
+        <div>title</div>
+        <input type="text" name ="title" value="{{title}}">
+      </label>
+      <br>
+        <label>
+          <div>text</div>
+          <textarea name ="txt">{{txt}}</textarea>
+        </label>
+
+        <div class="error">{{error}}</div>
+
+          <input type ="submit">
+      </form>
+
+      <hr>
+
+      {% endblock%}
